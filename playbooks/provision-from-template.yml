@@ -6,7 +6,7 @@
         vmware_guest:
           hostname: 10.150.1.6
           username: administrator@vsphere.local
-          password: Hell0w0rld!
+          password: Hell0w0rld1!
           validate_certs: False
           name: test_vm2
           template: tiny-template
