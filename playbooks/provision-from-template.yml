@@ -11,6 +11,6 @@
           name: test_vm2
           template: tiny-template
           datacenter: Austin-Datacenter
-          folder: /Austin-Datacenter/vm/Austin-Datacenter/Billy
+          folder: /Austin-Datacenter/vm
           state: poweredon
           wait_for_ip_address: yes
