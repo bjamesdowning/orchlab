@@ -1,6 +1,5 @@
 ---
-  - hosts: localhost
-    gather_facts: no
+  - gather_facts: no
     tasks:
       - name: Clone from template
         vmware_guest:
@@ -8,9 +7,9 @@
           username: "{{ vcenter_username }}"
           password: "{{ vcenter_password }}"
           validate_certs: False
-          name: test_vm2
-          template: tiny-template
+          name: "{{ vm_name }}"
+          template: "{{ vm_template }}"
           datacenter: Austin-Datacenter
-          folder: /Austin-Datacenter/vm
+          folder: /Austin-Datacenter/vm/{{ vm_folder }}
           state: poweredon
-          wait_for_ip_address: yes
+          wait_for_ip_address: no
