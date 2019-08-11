@@ -4,9 +4,9 @@
     tasks:
       - name: Clone from template
         vmware_guest:
-          hostname: "{{ vcenter_ip }}"
-          username: "{{ vcenter_username }}"
-          password: "{{ vcenter_password }}"
+          hostname: '{{ lookup("env", "VMWARE_HOST") }}'
+          username: '{{ lookup("env", "VMWARE_USER") }}'
+          password: '{{ lookup("env", "VMWARE_PASSWORD") }}'
           validate_certs: False
           name: "{{ vm_name }}"
           template: "{{ vm_template }}"
