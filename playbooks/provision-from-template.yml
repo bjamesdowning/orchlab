@@ -1,0 +1,15 @@
+---
+  - hosts: localhost
+    gather_facts: no
+    tasks:
+      - name: Clone from tempalte
+        vmware_guest:
+          hostname: 10.150.1.6
+          username: administrator@vpshere.local
+          password: Hell0w0rld!
+          validate_certs: False
+          name: test_vm2
+          tempalte: tiny-template
+          datacenter: Austin-Datacenter
+          state: poweredon
+          wait_for_ip_address: yes
