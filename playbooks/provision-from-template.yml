@@ -2,7 +2,7 @@
   - hosts: localhost
     gather_facts: no
     tasks:
-      - name: Clone from tempalte
+      - name: Clone from template
         vmware_guest:
           hostname: 10.150.1.6
           username: administrator@vsphere.local
@@ -11,5 +11,6 @@
           name: test_vm2
           template: tiny-template
           datacenter: Austin-Datacenter
+          folder: /Austin-Datacenter/Billy
           state: poweredon
           wait_for_ip_address: yes
